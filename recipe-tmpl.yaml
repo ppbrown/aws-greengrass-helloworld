@@ -22,4 +22,4 @@ Manifests:
       os: linux
     Lifecycle:
       Install: python3 -m pip install --user -U awsiotsdk
-      Run: python {artifacts:path}/main.py {configuration:/Audience}
+      Run: python3 {artifacts:path}/main.py {configuration:/Audience}
