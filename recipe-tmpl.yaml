@@ -1,0 +1,25 @@
+---
+RecipeFormatVersion: '2020-01-25'
+ComponentName: NAME
+ComponentVersion: VERSION
+ComponentDescription: Greengrass test
+ComponentPublisher: Bolthole
+ComponentConfiguration:
+  DefaultConfiguration:
+    accessControl:
+      aws.greengrass.Cli:
+        com.bolthole.hello:cli:
+          operations:
+            - "aws.greengrass#ListLocalDeployment"
+            - "aws.greengrass#ListComponents"
+            - "aws.greengrass#GetComponentDetails"
+          resources:
+            - "*"
+    TestValue: "A test string"
+    Audience: "World"
+Manifests:
+  - Platform:
+      os: linux
+    Lifecycle:
+      Install: python3 -m pip install --user -U awsiotsdk
+      Run: python {artifacts:path}/main.py {configuration:/Audience}
