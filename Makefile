@@ -7,13 +7,15 @@ SRCS=main.py
 
 
 recipedir/recipe.yaml:	Makefile recipe-tmpl.yaml
-	rm -rf recipedir/*
+	rm -rf recipedir
+	mkdir recipedir
 	sed -e 's/NAME/'$(NAME)'/' \
 	-e 's/VERSION/'$(VERSION)'/' \
 	 recipe-tmpl.yaml >recipedir/recipe.yaml
 
 localstage:	$(SRCS)
-	rm -rf artifactdir/*
+	rm -rf artifactdir
+	mkdir artifactdir
 	mkdir -p artifactdir/$(NAME)/$(VERSION)
 	cp $(SRCS) artifactdir/$(NAME)/$(VERSION)
 
