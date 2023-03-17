@@ -10,12 +10,10 @@ ComponentConfiguration:
       aws.greengrass.Cli:
         com.bolthole.hello:cli:
           operations:
-            - "aws.greengrass#ListLocalDeployment"
-            - "aws.greengrass#ListComponents"
             - "aws.greengrass#GetComponentDetails"
           resources:
             - "*"
-    TestValue: "A test string"
+    TestValue: "A test string for version VERSION"
     Audience: "World"
 Manifests:
   - Platform:
