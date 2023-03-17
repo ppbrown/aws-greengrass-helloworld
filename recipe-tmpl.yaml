@@ -6,13 +6,6 @@ ComponentDescription: Greengrass test
 ComponentPublisher: Bolthole
 ComponentConfiguration:
   DefaultConfiguration:
-    accessControl:
-      aws.greengrass.Cli:
-        com.bolthole.hello:cli:
-          operations:
-            - "aws.greengrass#GetComponentDetails"
-          resources:
-            - "*"
     TestValue: "A test string for version VERSION"
     Audience: "World"
 Manifests:
