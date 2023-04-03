@@ -35,6 +35,9 @@ At some point, I may add an S3 example deploy though.
 
 1. You need your greengrass with the "cli" module installed
    (That means that /greengrass/v2/bin/greengrass-cli exists)
+   
+2. You need the version of greengrass to be at least 2.9, otherwise
+the local deploy may complain about missing "metadata.json" and fail.
 
 
 ## Component summary
